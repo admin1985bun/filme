@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecții video de matematică</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+    --bg:#ffffff;
+    --text:#1f3c68;
+    --accent:#1e3c72;
+    --card:#ffffff;
+    --border:#e3eaf3;
+}
+
+body.dark{
+    --bg:#0f172a;
+    --text:#e5ecf4;
+    --accent:#3b82f6;
+    --card:#111827;
+    --border:#1f2937;
+}
+
+body{
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
+    padding:24px;
+    transition:.3s;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:48px;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:32px;
+}
+
+h1{font-size:2.3em;}
+
+.toggle{
+    cursor:pointer;
+    padding:8px 14px;
+    border-radius:8px;
+    background:var(--accent);
+    color:#fff;
+    font-size:.9em;
+}
+
+/* TITLURI */
+h2{
+    margin-top:44px;
+    margin-bottom:14px;
+    font-size:1.6em;
+    border-left:6px solid var(--accent);
+    padding-left:14px;
+}
+
+h3{
+    margin:18px 0 12px;
+    font-size:1.15em;
+    opacity:.85;
+}
+
+/* INTRO */
+.intro-text{
+    border-left:6px solid var(--accent);
+    padding:20px 24px;
+    margin-bottom:36px;
+}
+
+/* CARD VIDEO */
+.video-section{
+    margin:28px 0;
+    padding:24px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--card);
+}
+
+.video-title{
+    font-weight:600;
+    margin:14px 0;
+}
+
+/* MINIATURA */
+.thumb{
+    width:100%;
+    max-width:720px;
+    border-radius:14px;
+    cursor:pointer;
+    transition:.3s;
+    display:block;
+}
+
+.thumb:hover{transform:scale(1.02);}
+
+/* BUTON */
+.youtube-link{
+    display:inline-block;
+    margin-top:12px;
+    padding:12px 28px;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.youtube-link:hover{
+    transform:translateY(-2px);
+    opacity:.9;
+}
+
+/* LINKURI MARI */
+.link-section{
+    margin:40px 0;
+    padding:30px;
+    background:var(--accent);
+    border-radius:16px;
+    text-align:center;
+}
+
+.link-section a{
+    color:#fff;
+    text-decoration:none;
+    font-size:1.2em;
+    font-weight:700;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .container{padding:24px;}
+    h1{font-size:1.8em;}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="header">
+<h1>Lecții video de matematică</h1>
+<div class="toggle" onclick="toggleDark()">🌙 / ☀️</div>
+</div>
+
+<div class="intro-text">
+În cadrul rubricii „Diverse / Lecții diverse” puteți accesa lecții interactive de matematică.
+</div>
+
+<!-- VIDEO 1 -->
+<div class="video-section">
+<img class="thumb"
+     src="https://img.youtube.com/vi/0v8KGg2g5mc/maxresdefault.jpg"
+     onclick="openVideo('0v8KGg2g5mc')">
+<div class="video-title">Utilizarea aplicației GeoGebra</div>
+<a class="youtube-link" href="https://www.youtube.com/watch?v=0v8KGg2g5mc" target="_blank">▶ Start!</a>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="video-section">
+<img class="thumb"
+     src="https://img.youtube.com/vi/7IQ4Cd8XhAM/maxresdefault.jpg"
+     onclick="openVideo('7IQ4Cd8XhAM')">
+<div class="video-title">Metode aritmetice – clasele IV–V</div>
+<a class="youtube-link" href="https://www.youtube.com/watch?v=7IQ4Cd8XhAM" target="_blank">▶ Start!</a>
+</div>
+
+<h2>Algebră – clasa a V-a</h2>
+
+<div class="video-section">
+<img class="thumb"
+     src="https://img.youtube.com/vi/WYedrl7tS84/maxresdefault.jpg"
+     onclick="openVideo('WYedrl7tS84')">
+<div class="video-title">Mulțimea numerelor naturale</div>
+<a class="youtube-link" href="https://www.youtube.com/watch?v=WYedrl7tS84" target="_blank">▶ Start!</a>
+</div>
+
+<h2>Geometrie – clasele V–VIII</h2>
+
+<div class="video-section">
+<img class="thumb"
+     src="https://img.youtube.com/vi/__ZetEcduXY/maxresdefault.jpg"
+     onclick="openVideo('__ZetEcduXY')">
+<div class="video-title">Simetrii</div>
+<a class="youtube-link" href="https://www.youtube.com/watch?v=__ZetEcduXY" target="_blank">▶ Start!</a>
+</div>
+
+<div class="link-section">
+<a href="coliniar.html" target="_blank">
+Probleme de coliniaritate – START
+</a>
+</div>
+
+<div class="link-section">
+<a href="ecuatii.html" target="_blank">
+Ecuația de gradul II – START
+</a>
+</div>
+
+<!-- VIDEO FINAL EMINESCU -->
+<h2>Material interdisciplinar</h2>
+
+<div class="video-section">
+<img class="thumb"
+     src="https://img.youtube.com/vi/l6wiFIg2Hq8/maxresdefault.jpg"
+     onclick="openVideo('l6wiFIg2Hq8')">
+<div class="video-title">De la Eminescu la Einstein</div>
+<a class="youtube-link" href="https://www.youtube.com/watch?v=l6wiFIg2Hq8" target="_blank">▶ Start!</a>
+</div>
+
+</div>
+
+<script>
+function toggleDark(){
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme",
+        document.body.classList.contains("dark") ? "dark" : "light");
+}
+if(localStorage.getItem("theme")==="dark"){
+    document.body.classList.add("dark");
+}
+function openVideo(id){
+    window.open("https://www.youtube.com/watch?v="+id,"_blank");
+}
+</script>
+
+</body>
+</html>
